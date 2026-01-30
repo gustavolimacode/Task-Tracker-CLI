@@ -1,7 +1,7 @@
 import json
 import os
 
-DB_tasks = r"db/tasks.json"
+DB_tasks = r"db/tasks_example.json"
 
 def load_db():
     if not os.path.exists(DB_tasks):
