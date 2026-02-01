@@ -26,3 +26,12 @@ def add_task(title: str):
     tasks.append(new_task)
     save_tasks(tasks)
     return new_task
+
+def remove_task(id: int) -> bool:
+    tasks = load_db()
+    for task in tasks:
+        if task['id'] == id:
+            tasks.remove(task)
+            save_tasks(tasks)
+            return True
+    return False
