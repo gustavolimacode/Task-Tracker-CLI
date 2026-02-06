@@ -35,3 +35,15 @@ def remove_task(id: int) -> bool:
             save_tasks(tasks)
             return True
     return False
+
+def mark_as_concluded(task_id: int) -> bool:
+    tasks = load_db()
+    for task in tasks:
+        if task['id'] == task_id:
+            if task['done']:
+                return 'done'
+            
+            task['done'] = True
+            save_tasks(tasks)
+            return 'already done'
+    return 'not found'
