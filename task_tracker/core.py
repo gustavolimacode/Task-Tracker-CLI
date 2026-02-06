@@ -41,9 +41,9 @@ def mark_as_concluded(task_id: int) -> bool:
     for task in tasks:
         if task['id'] == task_id:
             if task['done']:
-                return 'done'
+                return 'already done'
             
             task['done'] = True
             save_tasks(tasks)
-            return 'already done'
+            return 'done'
     return 'not found'
