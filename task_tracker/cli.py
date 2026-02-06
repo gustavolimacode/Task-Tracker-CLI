@@ -1,12 +1,12 @@
 import argparse
-from core import add_task, list_tasks, remove_task
+from core import add_task, list_tasks, remove_task, mark_as_concluded
 
 def main():
     parser = argparse.ArgumentParser(description="Task Tracker CLI")
 
-    parser.add_argument("command", choices=['add', 'list', 'remove'], help="Task command to execute: add, list, remove")
+    parser.add_argument("command", choices=['add', 'list', 'remove', 'done'], help="Task command to execute: add, list, remove, done")
     parser.add_argument("--title", help="Task title (Required for the 'add' command).")
-    parser.add_argument("--id", type=int, help="Task id (Required for the 'remove' command).")
+    parser.add_argument("--id", type=int, help="Task id (Required for the “remove” and “done” commands).")
 
     args = parser.parse_args()
 
@@ -38,6 +38,20 @@ def main():
         else:
             print(f'Task with id {args.id} not found.')
 
+    elif args.command == 'done':
+        if args.id is None:
+            print("Error: You need to specify the task id with '--id'")
+            return
+        
+        result = mark_as_concluded(args.id)
 
+        if result == 'done':
+            print(f'Task with id {args.id} has been completed')
+        elif result == 'already done':
+            print(f'Task {args.id} was already completed')
+        else:
+            print(f'Task {args.id} not found')
+
+            
 if __name__ == '__main__':
     main()
