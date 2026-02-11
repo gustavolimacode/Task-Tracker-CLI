@@ -22,7 +22,7 @@ This project was created as a learning exercise to practice:
 
 ## 📁 Project Structure
 
-task-tracker-cli/
+'''task-tracker-cli/
 ├── task_tracker/
 │   ├── init.py
 │   ├── cli.py            # Command Line Interface (argparse)
@@ -36,3 +36,4 @@ task-tracker-cli/
 │       └── ci.yml        # GitHub Actions CI pipeline
 ├── .gitignore
 └── README.md
+'''
