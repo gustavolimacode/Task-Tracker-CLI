@@ -1,5 +1,6 @@
 # 📝 Task Tracker CLI
 
+![CI](https://github.com/gustavolimacode/Task-Tracker-CLI/actions/workflows/ci.yml/badge.svg)
 
 A minimal and clean Command Line Interface (CLI) application for managing tasks.  
 Built with Python, fully tested with pytest, and integrated with GitHub Actions CI.
@@ -7,7 +8,31 @@ Built with Python, fully tested with pytest, and integrated with GitHub Actions 
 This project was created as a learning exercise to practice:
 - Writing modular Python code
 - Automated testing
-- Continous Integration (CI) pipelines
+- Continuous Integration (CI) pipelines
 
+## Features
 
-![CI](https://github.com/gustavolimacode/Task-Tracker-CLI/actions/workflows/ci.yml/badge.svg)
+- Add new tasks
+- List all tasks
+- Remove tasks by ID
+- Mark tasks as completed
+- Store tasks in a lightweight JSON database
+- Fully tested with 'pytest'
+- Continuous Integration with GitHub Actions
+
+## 📁 Project Structure
+
+task-tracker-cli/
+├── task_tracker/
+│   ├── init.py
+│   ├── cli.py            # Command Line Interface (argparse)
+│   └── core.py           # Business logic and task operations
+├── tests/
+│   └── test_core.py      # Unit tests for the core module
+├── db/
+│   └── tasks_example.json  # Local JSON database
+├── .github/
+│   └── workflows/
+│       └── ci.yml        # GitHub Actions CI pipeline
+├── .gitignore
+└── README.md
