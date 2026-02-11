@@ -10,7 +10,7 @@ This project was created as a learning exercise to practice:
 - Automated testing
 - Continuous Integration (CI) pipelines
 
-## Features
+## ✨ Features
 
 - Add new tasks
 - List all tasks
