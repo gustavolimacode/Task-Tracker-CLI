@@ -37,3 +37,20 @@ This project was created as a learning exercise to practice:
 ├── .gitignore
 └── README.md
 ```
+
+## 🚀 Installation
+
+Clone the repository:
+```bash
+git clone https://github.com/gustavolimacode/Task-Tracker-CLI.git
+cd Task-Tracker-CLI
+```
+
+(Optional) Create and activate a virtual environment:
+```
+python -m venv .venv
+source venv/bin/activate   # Linux/macOS
+venv\Scripts\activate      # Windows
+
+pip install pytest
+```
