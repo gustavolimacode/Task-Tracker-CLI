@@ -80,3 +80,39 @@ Remove a task by ID
 ```
 python -m task_tracker/cli.py remove --id 1
 ```
+
+## 🧪 Running Tests
+
+This project includes a full test suite for the core logic, written using `pytest`.
+
+To run all tests, simply execute:
+```bash
+pytest -v
+```
+The tests cover:
+- Adding tasks
+- Listing tasks
+- Removing tasks
+- Marking tasks as completed
+- Handling non-existent task IDs
+- Handling tasks that are already completed
+
+All tests run automatically in the GitHub Actions pipeline on every push or pull request.
+
+## ⚙️ Continuous Integration (CI)
+
+This project includes a GitHub Actions pipeline that runs automatically on every push and pull request.
+
+The CI workflow performs:
+- Checkout of the repository
+- Python enviroment setup
+- Installation of dependencies
+- Execution of the full pytest test suite
+
+If all tests pass, the pipeline is marked as successful.
+If any test fails, the CI blocks the merge - ensuring code quality.
+
+The workflow file is located at:
+.github/workflows/ci.yml
+
+You can also check the current CI status using the badge at the top of this README.
