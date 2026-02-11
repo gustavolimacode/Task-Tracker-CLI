@@ -57,3 +57,26 @@ Install development dependencies:
 ```
 pip install pytest
 ```
+
+## ▶️ Usage
+
+You can run the CLI using Python's `-m` module syntax:
+```bash
+python -m task_tracker/cli.py <command> [options]
+```
+Add a new task
+```
+python -m task_tracker/cli.py add --title "Learn Python"
+```
+List all tasks
+```
+python -m task_tracker/cli.py list
+```
+Mark a task as completed
+```
+python -m task_tracker/cli.py done --id 1
+```
+Remove a task by ID
+```
+python -m task_tracker/cli.py remove --id 1
+```
