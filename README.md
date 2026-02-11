@@ -51,6 +51,9 @@ cd Task-Tracker-CLI
 python -m venv .venv
 source venv/bin/activate   # Linux/macOS
 venv\Scripts\activate      # Windows
+```
 
+Install development dependencies:
+```
 pip install pytest
 ```
